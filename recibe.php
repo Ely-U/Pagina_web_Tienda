@@ -18,8 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'yurimitzuki@gmail.com'; //Mi correo de Gmail
-            $mail->Password = 'qoys umhb uhmq ejki'; //Contraseña o clave de aplicación
+            $mail->Username = '@gmail.com'; //correo de Gmail
+            $mail->Password = ''; //Contraseña o clave de aplicación
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //Usar STARTTLS
             $mail->Port = 587;
 
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             //Configuración del correo
             $mail->setFrom($correo, $nombre);
-            $mail->addAddress('yurimitzuki@gmail.com', 'Destinatario'); // Dirección de destino
+            $mail->addAddress('@gmail.com', 'Destinatario'); // Dirección de destino
             $mail->Subject = 'Nuevo mensaje de contacto';
             $mail->Body = "Has recibido un mensaje de contacto:\n\nNombre: $nombre\nCorreo: $correo\nMensaje:\n$mensaje";
 
